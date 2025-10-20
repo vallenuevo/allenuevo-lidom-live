@@ -1,12 +1,27 @@
-{
-  "updated": "2025-10-20T23:59:00",
-  "rows": [
-    {"Equipo": "Águilas", "JJ": 11, "G": 7, "P": 4, "PCT": ".636", "DIF": "—", "Racha": "W1", "U10": "7-3"},
-    {"Equipo": "Licey", "JJ": 11, "G": 6, "P": 5, "PCT": ".545", "DIF": "1.0", "Racha": "L1", "U10": "6-4"},
-    {"Equipo": "Toros", "JJ": 11, "G": 6, "P": 5, "PCT": ".545", "DIF": "1.0", "Racha": "L1", "U10": "5-5"},
-    {"Equipo": "Gigantes", "JJ": 11, "G": 5, "P": 6, "PCT": ".455", "DIF": "2.0", "Racha": "W1", "U10": "5-5"},
-    {"Equipo": "Escogido", "JJ": 11, "G": 5, "P": 6, "PCT": ".455", "DIF": "2.0", "Racha": "W1", "U10": "5-5"},
-    {"Equipo": "Estrellas", "JJ": 11, "G": 4, "P": 7, "PCT": ".364", "DIF": "3.0", "Racha": "L2", "U10": "4-6"}
-  ]
-}
- 
+# ---- TABLA DE POSICIONES (oficial desde estadisticas.lidom.com) ----
+try:
+    lidom_url = "https://estadisticas.lidom.com/TablaPosicion"
+    print("Actualizando tabla desde:", lidom_url)
+    html = requests.get(lidom_url, headers={'User-Agent': 'Mozilla/5.0'}).text
+    soup = BeautifulSoup(html, "html.parser")
+
+    rows = []
+    for tr in soup.select("table tbody tr"):
+        cols = [td.get_text(strip=True) for td in tr.select("td")]
+        if len(cols) >= 8:
+            rows.append({
+                "Equipo": cols[0],
+                "JJ": cols[1],
+                "G": cols[2],
+                "P": cols[3],
+                "PCT": cols[4],
+                "DIF": cols[5],
+                "Racha": cols[6],
+                "U10": cols[7],
+            })
+
+    standings = {"updated": datetime.datetime.utcnow().isoformat(), "rows": rows}
+    save_json("data/standings.json", standings)
+    print("✅ Tabla actualizada correctamente:", len(rows), "equipos")
+except Exception as e:
+    print("❌ Error al obtener posiciones:", e)
