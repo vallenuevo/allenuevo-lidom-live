@@ -25,3 +25,4 @@ try:
     print("✅ Tabla actualizada correctamente:", len(rows), "equipos")
 except Exception as e:
     print("❌ Error al obtener posiciones:", e)
+ 
