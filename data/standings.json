@@ -1,12 +1,4 @@
 {
-  "updated": "2025-10-20T00:00:00Z",
-  "rows": [
-    {"Equipo":"Toros del Este","JJ":"10","G":"7","P":"3","PCT":".700","DIF":"0","Racha":"W2","U10":"7-3"},
-    {"Equipo":"Tigres del Licey","JJ":"10","G":"6","P":"4","PCT":".600","DIF":"1","Racha":"L1","U10":"6-4"},
-    {"Equipo":"Águilas Cibaeñas","JJ":"10","G":"5","P":"5","PCT":".500","DIF":"2","Racha":"W1","U10":"5-5"},
-    {"Equipo":"Leones del Escogido","JJ":"10","G":"5","P":"5","PCT":".500","DIF":"2","Racha":"L1","U10":"5-5"},
-    {"Equipo":"Gigantes del Cibao","JJ":"10","G":"4","P":"6","PCT":".400","DIF":"3","Racha":"W1","U10":"4-6"},
-    {"Equipo":"Estrellas Orientales","JJ":"10","G":"3","P":"7","PCT":".300","DIF":"4","Racha":"L2","U10":"3-7"}
-  ]
+  "updated": "2025-10-20T15:54:30.083928",
+  "rows": []
 }
- 
