@@ -20,6 +20,16 @@
         "8vo inning: Escogido empata",
         "9no inning: Walk-off de Toros"
       ]
+    },
+    {
+      "title": "Gigantes vs Estrellas",
+      "state": "En curso",
+      "score": "2-1 (5to inning)",
+      "play_by_play": [
+        "1er inning: Gigantes anotan dos",
+        "3er inning: Estrellas responden con una",
+        "5to inning: partido en progreso"
+      ]
     }
   ]
 }
