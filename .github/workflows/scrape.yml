@@ -1,12 +1,12 @@
-name: LIDOM scrape (ValleNuevoTV)
+name: Actualizar juegos y posiciones LIDOM
 
 on:
   schedule:
-    - cron: "*/10 * * * *"  # Ejecuta cada 10 minutos
+    - cron: "0 * * * *" # cada hora
   workflow_dispatch:
 
 jobs:
-  run-scraper:
+  update-data:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -15,16 +15,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Instalar dependencias
-        run: |
+      - run: |
           pip install requests beautifulsoup4 lxml
-      - name: Ejecutar script de scraping
-        run: |
           python scripts/scrape.py
-      - name: Guardar cambios en GitHub
+      - name: Commit & push
         run: |
-          git config user.name "vn-scraper"
-          git config user.email "scraper@users.noreply.github.com"
-          git add -A
-          git commit -m "auto: refresh games and standings" || echo "no changes"
+          git config user.name "vallebot"
+          git config user.email "vallebot@users.noreply.github.com"
+          git add .
+          git commit -m "update automatico LIDOM" || echo "no changes"
           git push
