@@ -6,9 +6,19 @@
       "state": "Final",
       "score": "4-0",
       "play_by_play": [
-        "Primer inning: Licey deja dos en base",
-        "Tercer inning: Águilas anotan dos carreras",
-        "Séptimo inning: HR de Celestén para Águilas"
+        "1er inning: Licey deja dos en base",
+        "3er inning: Águilas anotan dos carreras",
+        "7mo inning: HR de Celestén para Águilas"
+      ]
+    },
+    {
+      "title": "Toros vs Escogido",
+      "state": "Final",
+      "score": "4-3",
+      "play_by_play": [
+        "1er inning: Toros anotan una",
+        "8vo inning: Escogido empata",
+        "9no inning: Walk-off de Toros"
       ]
     }
   ]
