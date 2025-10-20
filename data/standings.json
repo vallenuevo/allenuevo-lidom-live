@@ -1,36 +1,5 @@
-# ---- TABLA DE POSICIONES (fuente oficial LIDOM JSON) ----
-import json
-
-try:
-    url = "https://estadisticas.lidom.com/Api/TablaPosicion"
-    print("📊 Obteniendo tabla de posiciones desde API:", url)
-
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0 Safari/537.36",
-        "Accept": "application/json, text/plain, */*",
-        "Referer": "https://estadisticas.lidom.com/",
-    }
-
-    res = requests.get(url, headers=headers, timeout=30)
-    res.raise_for_status()
-    data = res.json()
-
-    # La API devuelve una lista de equipos con sus estadísticas
-    rows = []
-    for item in data:
-        rows.append({
-            "Equipo": item.get("Equipo", ""),
-            "JJ": item.get("JJ", ""),
-            "G": item.get("G", ""),
-            "P": item.get("P", ""),
-            "PCT": item.get("PCT", ""),
-            "DIF": item.get("DIF", ""),
-            "Racha": item.get("Racha", ""),
-            "U10": item.get("U10", "")
-        })
-
-    standings = {"updated": datetime.datetime.utcnow().isoformat(), "rows": rows}
-    save_json("data/standings.json", standings)
-    print(f"✅ Tabla actualizada correctamente: {len(rows)} equipos")
-except Exception as e:
-    print("❌ Error al obtener posiciones desde API:", e)
+{
+  "updated": "2025-10-20T21:38:47Z",
+  "rows": [],
+  "error": "404 Client Error: Not Found for url: https://estadisticas.lidom.com/Api/TablaPosicion"
+}
