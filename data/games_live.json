@@ -1,21 +1,6 @@
 {
-  "updated": "2025-10-20T23:59:00",
+  "updated": "2025-10-20T12:00:00",
   "games": [
-    {
-      "title": "Licey vs Águilas",
-      "state": "Final",
-      "score": "4 - 7"
-    },
-    {
-      "title": "Toros vs Escogido",
-      "state": "Final",
-      "score": "3 - 8"
-    },
-    {
-      "title": "Estrellas vs Gigantes",
-      "state": "Final",
-      "score": "5 - 6"
-    }
+    {"title": "Licey vs Águilas", "state": "En juego", "score": "2 - 1"}
   ]
 }
- 
