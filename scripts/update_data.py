@@ -29,7 +29,7 @@ try:
         if g.get("Fecha", "").startswith(today):
             games_today.append({
                 "Juego": f"{g.get('VisitanteNombre', '')} vs {g.get('HomeClubNombre', '')}",
-                "Estado": g.get("EstadoJuego", ""),
+                "Estado": g.get("EstadoJuego', '')",
                 "Marcador": f"{g.get('CarrerasVisitante', 0)} - {g.get('CarrerasHomeClub', 0)}",
                 "Estadio": g.get("EstadioNombre", "")
             })
