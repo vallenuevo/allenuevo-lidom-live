@@ -7,8 +7,11 @@
       "score": "4-0",
       "play_by_play": [
         "1er inning: Licey deja dos en base",
-        "3er inning: Águilas anotan dos carreras",
-        "7mo inning: HR de Celestén para Águilas"
+        "2do inning: Cero por ambos lados",
+        "3er inning: Águilas anotan dos carreras con hit de Celestén",
+        "5to inning: Fallo con corredores en posición anotadora para Licey",
+        "7mo inning: HR de Celestén pone el juego 4-0",
+        "9no inning: Licey se va en blanco. Final del partido."
       ]
     },
     {
@@ -16,9 +19,11 @@
       "state": "Final",
       "score": "4-3",
       "play_by_play": [
-        "1er inning: Toros anotan una",
-        "8vo inning: Escogido empata",
-        "9no inning: Walk-off de Toros"
+        "1er inning: Toros anotan una carrera temprana",
+        "3er inning: Escogido empata con doble productor",
+        "6to inning: Escogido toma ventaja 3-2",
+        "8vo inning: Toros empatan el partido",
+        "9no inning: Walk-off hit de los Toros del Este. Victoria 4-3."
       ]
     },
     {
@@ -26,11 +31,10 @@
       "state": "En curso",
       "score": "2-1 (5to inning)",
       "play_by_play": [
-        "1er inning: Gigantes anotan dos",
+        "1er inning: Gigantes anotan dos carreras con triple de Bonifacio",
         "3er inning: Estrellas responden con una",
-        "5to inning: partido en progreso"
+        "5to inning: Gigantes mantienen la ventaja 2-1"
       ]
     }
   ]
 }
-
