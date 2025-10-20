@@ -1,11 +1,4 @@
 {
-  "updated": "2025-10-20T15:29:19.408188",
-  "rows": [
-    {"Equipo": "Licey", "JJ": 10, "G": 7, "P": 3, "PCT": ".700", "DIF": "—",  "Racha": "W3", "U10": "7-3"},
-    {"Equipo": "Águilas", "JJ": 10, "G": 6, "P": 4, "PCT": ".600", "DIF": "1.0","Racha": "L1", "U10": "6-4"},
-    {"Equipo": "Toros", "JJ": 10, "G": 5, "P": 5, "PCT": ".500", "DIF": "2.0","Racha": "W1", "U10": "5-5"},
-    {"Equipo": "Gigantes", "JJ": 10, "G": 4, "P": 6, "PCT": ".400", "DIF": "3.0","Racha": "L2", "U10": "4-6"},
-    {"Equipo": "Estrellas","JJ": 10, "G": 4, "P": 6, "PCT": ".400", "DIF": "3.0","Racha": "W2", "U10": "4-6"},
-    {"Equipo": "Leones",  "JJ": 10, "G": 3, "P": 7, "PCT": ".300", "DIF": "4.0","Racha": "L4", "U10": "3-7"}
-  ]
+  "updated": "2025-10-20T19:16:07.581131",
+  "rows": []
 }
