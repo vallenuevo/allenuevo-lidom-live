@@ -1,9 +1,9 @@
- name: Actualizar datos LIDOM
+name: Actualizar datos LIDOM
 
 on:
   schedule:
     - cron: "*/30 * * * *"   # cada 30 minutos
-  workflow_dispatch: {}       # ejecución manual
+  workflow_dispatch: {}       # también se puede ejecutar manualmente
 
 jobs:
   update:
