@@ -1,9 +1,9 @@
-     name: Actualizar datos LIDOM
+ name: Actualizar datos LIDOM
 
 on:
   schedule:
     - cron: "*/30 * * * *"   # cada 30 minutos
-  workflow_dispatch: {}       # permite correr manualmente
+  workflow_dispatch: {}       # ejecución manual
 
 jobs:
   update:
@@ -25,7 +25,7 @@ jobs:
       - name: Ejecutar script de actualización
         run: python3 scripts/update_data.py
 
-      - name: Subir cambios
+      - name: Subir cambios actualizados
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -33,5 +33,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main || true
           git add -A
-          git commit -m "Auto-update LIDOM data [skip ci]" || echo "Sin cambios para commitear"
+          git commit -m "Auto-update datos LIDOM [skip ci]" || echo "Sin cambios para commitear"
           git push origin main || echo "Sin cambios para subir"
