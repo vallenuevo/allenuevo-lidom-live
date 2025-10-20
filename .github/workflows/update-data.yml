@@ -1,0 +1,31 @@
+name: Actualizar datos LIDOM
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # cada hora
+  workflow_dispatch: {}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get install -y python3-bs4
+          pip install requests beautifulsoup4
+
+      - name: Ejecutar script de actualización
+        run: python3 scripts/update_data.py
+
+      - name: Subir cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json
+          git commit -m "Auto-update LIDOM data [skip ci]" || echo "No hay cambios"
+          git push
